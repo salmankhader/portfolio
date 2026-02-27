@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Code2, Globe, Star, Trophy } from "lucide-react";
 
 export default function Hero() {
-    const containerVariants = {
+    const containerVariants: any = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -30,7 +30,7 @@ export default function Hero() {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    transition={{ duration: 0.6 }}
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6 font-medium"
                 >
                     <span className="relative flex h-3 w-3">
@@ -44,7 +44,7 @@ export default function Hero() {
                     className="text-4xl md:text-5xl font-extrabold mb-8 tracking-tighter leading-[1.15] font-sans"
                     initial={{ opacity: 0, filter: "blur(10px)" }}
                     animate={{ opacity: 1, filter: "blur(0px)" }}
-                    transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+                    transition={{ duration: 0.8, delay: 0.1 }}
                 >
                     Building scalable <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-primary">Intelligent Systems</span> <br className="hidden md:block" /> and high-performance applications.
                 </motion.h1>
@@ -55,20 +55,20 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                    I'm MDSALMAN KHADER. I specialize in developing end-to-end architectures, AI readiness platforms, and competitive problem-solving.
+                    I&apos;m MDSALMAN KHADER. I specialize in developing end-to-end architectures, AI readiness platforms, and competitive problem-solving.
                 </motion.p>
             </div>
 
             {/* Bento Grid layout for Competitive Stats */}
             <motion.div
                 className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl"
-                variants={containerVariants}
+                variants={containerVariants as any}
                 initial="hidden"
                 animate="visible"
             >
                 {/* LeetCode Card */}
                 <motion.div
-                    variants={itemVariants}
+                    variants={itemVariants as any}
                     whileHover={{ y: -8, boxShadow: "0 0 30px rgba(59, 130, 246, 0.4)" }}
                     className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 flex flex-col items-center justify-center relative overflow-hidden group transition-all duration-300"
                 >
@@ -85,7 +85,7 @@ export default function Hero() {
 
                 {/* Global Rank Card */}
                 <motion.div
-                    variants={itemVariants}
+                    variants={itemVariants as any}
                     whileHover={{ y: -8, boxShadow: "0 0 30px rgba(59, 130, 246, 0.4)" }}
                     className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 flex flex-col items-center justify-center relative overflow-hidden group transition-all duration-300 md:col-span-1"
                 >
@@ -102,7 +102,7 @@ export default function Hero() {
 
                 {/* CodeChef Card */}
                 <motion.div
-                    variants={itemVariants}
+                    variants={itemVariants as any}
                     whileHover={{ y: -8, boxShadow: "0 0 30px rgba(59, 130, 246, 0.4)" }}
                     className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 flex flex-col items-center justify-center relative overflow-hidden group transition-all duration-300"
                 >

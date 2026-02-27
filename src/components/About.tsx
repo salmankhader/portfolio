@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Plane, BookOpen, Film, Mic } from "lucide-react";
-import { PROFILE } from "@/constants";
 
 export default function About() {
     const hobbies = [
@@ -69,11 +68,11 @@ export default function About() {
                         <h3 className="text-2xl md:text-3xl font-bold mb-8 text-white">Life Beyond Code</h3>
 
                         <p className="text-neutral-400 mb-10 text-lg">
-                            When I'm not optimizing algorithms or designing system architectures, I'm usually finding inspiration in the real world.
+                            When I&apos;m not optimizing algorithms or designing system architectures, I&apos;m usually finding inspiration in the real world.
                         </p>
 
                         <div className="grid grid-cols-2 gap-6">
-                            {hobbies.map((hobby, index) => (
+                            {hobbies.map((hobby) => (
                                 <motion.div
                                     key={hobby.name}
                                     whileHover={{ scale: 1.05, y: -5 }}
