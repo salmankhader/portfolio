@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Globe, Star, Trophy } from "lucide-react";
+import { Code2, Globe, Star, Trophy, Github, Linkedin, Mail, FileText } from "lucide-react";
+import { PROFILE } from "@/constants";
 
 export default function Hero() {
     const containerVariants: any = {
@@ -55,8 +56,32 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                    I&apos;m MDSALMAN KHADER. I specialize in developing end-to-end architectures, AI readiness platforms, and competitive problem-solving.
+                    I&apos;m Salman Khader. I specialize in developing end-to-end architectures, AI readiness platforms, and competitive problem-solving.
                 </motion.p>
+
+                <motion.div
+                    className="flex flex-wrap items-center justify-center gap-4 mt-8"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                    <a href={PROFILE.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-neutral-300 hover:text-white">
+                        <Github className="w-5 h-5" />
+                        <span>GitHub</span>
+                    </a>
+                    <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-neutral-300 hover:text-white">
+                        <Linkedin className="w-5 h-5" />
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href={`mailto:${PROFILE.email}`} className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-neutral-300 hover:text-white">
+                        <Mail className="w-5 h-5" />
+                        <span>Email</span>
+                    </a>
+                    <a href={PROFILE.resume} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-full bg-primary/20 border border-primary/30 hover:bg-primary/30 hover:border-primary/50 transition-all text-primary hover:text-primary-focus font-medium">
+                        <FileText className="w-5 h-5" />
+                        <span>Resume</span>
+                    </a>
+                </motion.div>
             </div>
 
             {/* Bento Grid layout for Competitive Stats */}

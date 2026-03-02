@@ -11,8 +11,9 @@ export const PROFILE = {
     title: "Software Engineer",
     email: "salmankhader123@gmail.com",
     phone: "+91-6281936795",
-    github: "GitHub", // Add actual link later
-    linkedin: "LinkedIn", // Add actual link later
+    github: "#", // Add actual GitHub link later
+    linkedin: "#", // Add actual LinkedIn link later
+    resume: "#", // Add actual Resume link later
     hobbies: ["Travelling", "Reading", "Movies", "Singing"],
 };
 
